@@ -50,8 +50,11 @@ $("#closeModal").addEventListener("click",close);
 backdrop.addEventListener("click",e=>{if(e.target===backdrop)close()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!backdrop.hidden)close();if(e.key==="Tab"&&!backdrop.hidden){const focusables=$$('button:not([disabled]),input:not([disabled]),select,textarea,a[href]',backdrop).filter(el=>el.offsetParent!==null);if(!focusables.length)return;let first=focusables[0],last=focusables[focusables.length-1];if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault()}else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault()}}});
 const search=$("#moduleSearch");function doSearch(){const query=search.value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");let hits=0;$$(".module-card").forEach(card=>{const s=card.dataset.search.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");const show=s.includes(query);card.hidden=!show;if(show)hits++});$("#emptyModules").hidden=hits>0}search.addEventListener("input",doSearch);$("#clearSearch").addEventListener("click",()=>{search.value="";doSearch();search.focus()});
-$("#menuBtn").addEventListener("click",()=>{const nav=$("#mobileNav");nav.hidden=!nav.hidden;$("#menuBtn").setAttribute("aria-expanded",String(!nav.hidden))});
-$$(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>{$("#mobileNav").hidden=true;$("#menuBtn").setAttribute("aria-expanded","false")}));
+function setMenu(open){const nav=$("#mobileNav"),btn=$("#menuBtn");nav.hidden=!open;btn.setAttribute("aria-expanded",String(open));btn.setAttribute("aria-label",open?"Fechar menu":"Abrir menu")}
+$("#menuBtn").addEventListener("click",()=>setMenu($("#mobileNav").hidden));
+$$(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#mobileNav").hidden){setMenu(false);$("#menuBtn").focus()}});
+document.addEventListener("click",e=>{if(!$("#mobileNav").hidden&&!e.target.closest(".site-header"))setMenu(false)});
 function logClick(target){const p=profile();if(onGitHubPreview||!p||!p.analytics)return;const obj=new URLSearchParams({"form-name":"eventos","visitor_id":p.id,"acao":"clique_link","destino":target,"quando":new Date().toISOString(),"bot-field":""});fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:obj.toString(),keepalive:true}).catch(()=>{});}
 $$("a[data-track]").forEach(a=>a.addEventListener("click",()=>logClick(a.dataset.track)));
 const p=profile();if(p)$("#accountBtn").textContent="Olá, "+p.nome;
