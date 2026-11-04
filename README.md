@@ -32,3 +32,6 @@ Comando: netlify deploy --prod --site b99598bb-06dc-4d94-a62b-28ccc3d5f11b --dir
 Verificar que os Forms foram detectados após deploy e testar com dados legítimos.
 ## Assistente de ingressos no WhatsApp — fase futura
 O WhatsApp Cloud API + Flows pode orquestrar atendimento, preferência por jogo/setor/valor e links oficiais. Compra 100% na conversa só com API/credenciamento oficial do operador de ingressos, GaloID e biometria tratadas em canal autorizado, confirmação do comprador e checkout seguro. Nunca coletar senha, documento de biometria ou cartão no robô. Para cessão de cativa, o Super App do Atlético permanece o canal de transferência.
+
+## Identidade visual atualizada
+Referência: mockup preto/dourado Galo Conexões (celular + laptop e grade de dez módulos). Implementado em poster.css, poster_top.html, assets/logo-poster.svg e assets/photos. As fotografias são ilustrativas; conferir direitos de uso antes de comercializar. Foto do Metrô BH: Agência Minas / Wikimedia Commons, licença com atribuição.

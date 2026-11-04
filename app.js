@@ -19,7 +19,7 @@ function setMode(mode){activeMode=mode;Object.values(forms).forEach(f=>f.hidden=
 }
 function show(mode){lastFocus=document.activeElement;setMode(mode);backdrop.hidden=false;document.body.classList.add("modal-open");$("#closeModal").focus()}
 function close(){backdrop.hidden=true;document.body.classList.remove("modal-open");lastFocus?.focus?.()}
-function post(module,action){pendingPost={module,action};if(!profile()){toast("Para fazer uma conexão, registre-se primeiro.");show("signup");return}openPost(module,action)}
+function post(module,action){if(onGitHubPreview){openPost(module,action);return}pendingPost={module,action};if(!profile()){toast("Para fazer uma conexão, registre-se primeiro.");show("signup");return}openPost(module,action)}
 function openPost(module,action){$("#postModule").value=module;$("#postAction").value=action;forms.post.reset();$("#postModule").value=module;$("#postAction").value=action;show("post")}
 function partner(type){if(type){$("#partnerType").value=type}show("partner")}
 function cpfValid(value){let s=String(value).replace(/\D/g,"");if(s.length!==11||/^(\d)\1+$/.test(s))return false;for(let t=9;t<11;t++){let sum=0;for(let i=0;i<t;i++)sum+=Number(s[i])*(t+1-i);let d=(sum*10)%11;if(d===10)d=0;if(d!==Number(s[t]))return false}return true}
@@ -55,5 +55,5 @@ $$(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>{$("#mobileNav").h
 function logClick(target){const p=profile();if(onGitHubPreview||!p||!p.analytics)return;const obj=new URLSearchParams({"form-name":"eventos","visitor_id":p.id,"acao":"clique_link","destino":target,"quando":new Date().toISOString(),"bot-field":""});fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:obj.toString(),keepalive:true}).catch(()=>{});}
 $$("a[data-track]").forEach(a=>a.addEventListener("click",()=>logClick(a.dataset.track)));
 const p=profile();if(p)$("#accountBtn").textContent="Olá, "+p.nome;
-if(onGitHubPreview){const alert=document.createElement("div");alert.style.cssText="background:#fff4d4;color:#262019;padding:12px 24px;text-align:center;font-size:12px;border-bottom:1px solid #d8bd80";alert.textContent="PRÉVIA VISUAL · Cadastro e anúncios ainda não recebem dados. Publicação Netlify aguarda liberação de créditos.";document.body.insertBefore(alert,document.body.firstChild)}if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
 })();

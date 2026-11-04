@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 286" role="img" aria-label="Galo Conexões">
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff1bf"/><stop offset=".45" stop-color="#e6bd68"/><stop offset="1" stop-color="#af7624"/></linearGradient><linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fa5050"/><stop offset="1" stop-color="#a01514"/></linearGradient></defs>
+<path d="M130 15 244 55v121c0 41-49 80-114 104C65 256 16 217 16 176V55Z" fill="#141519" stroke="url(#gold)" stroke-width="8"/>
+<path d="M130 27 232 62v114c0 33-42 70-102 92C70 246 28 209 28 176V62Z" fill="#08090b" stroke="#faf7f0" stroke-width="3"/>
+<path d="m130 11 5 15 16 1-13 9 4 15-12-9-12 9 4-15-13-9 16-1Z" fill="url(#gold)"/>
+<path d="M92 90c-3-20 8-37 22-45 5 12 12 15 17 16 14-18 32-15 45-7-9 16-17 23-26 26 19 4 28 14 29 28-15 0-27 5-34 11l-14-3c-9 17-10 34-12 52-3 30-22 53-43 69-29-19-44-45-45-69 11 16 23 24 36 27-15-25-18-43-11-67 9 11 16 15 32 17-7-21-5-37 4-55Z" fill="#fff"/>
+<path d="M86 135c-12 9-19 27-15 48 11 12 18 21 32 27-7-15-10-31-8-46l21-51Z" fill="#bcbcbc"/>
+<path d="M118 62c-2-20 9-32 25-36 10 8 13 15 14 25-9-3-16-3-20 5 7 1 15 7 17 16-11-5-26-8-36-10Z" fill="url(#red)"/>
+<path d="M138 55c8-11 22-16 34-9 3 12 1 20-6 29-7-8-19-14-28-20Z" fill="url(#red)"/>
+<path d="M142 104c14-1 31 6 62 23-21 9-34 17-56 23l-17-23Z" fill="url(#gold)" stroke="#d89d40" stroke-width="2"/>
+<path d="M167 127 201 127 163 142Z" fill="#cf923d"/>
+<circle cx="153" cy="101" r="8" fill="#09090b"/><circle cx="155" cy="99" r="2" fill="#fff"/>
+<path d="M129 145c11 18 14 37 13 54M148 143c18 18 24 37 22 52" stroke="#d02223" stroke-width="9" stroke-linecap="round" fill="none"/>
+<path d="M90 231c18-9 35-22 42-39" stroke="url(#gold)" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>
