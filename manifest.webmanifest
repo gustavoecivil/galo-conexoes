@@ -1,0 +1,24 @@
+{
+  "name": "Galo Conexões — A Massa se encontra aqui",
+  "short_name": "Galo Conexões",
+  "description": "Comunidade de conexões entre atleticanos",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#171819",
+  "theme_color": "#171819",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
