@@ -30,3 +30,5 @@ Diretório local C:\Projetos\Galo-Conexoes
 Netlify site ID b99598bb-06dc-4d94-a62b-28ccc3d5f11b
 Comando: netlify deploy --prod --site b99598bb-06dc-4d94-a62b-28ccc3d5f11b --dir . --no-build
 Verificar que os Forms foram detectados após deploy e testar com dados legítimos.
+## Assistente de ingressos no WhatsApp — fase futura
+O WhatsApp Cloud API + Flows pode orquestrar atendimento, preferência por jogo/setor/valor e links oficiais. Compra 100% na conversa só com API/credenciamento oficial do operador de ingressos, GaloID e biometria tratadas em canal autorizado, confirmação do comprador e checkout seguro. Nunca coletar senha, documento de biometria ou cartão no robô. Para cessão de cativa, o Super App do Atlético permanece o canal de transferência.
