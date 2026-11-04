@@ -174,7 +174,7 @@ h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-heig
 .central-section{margin:0 var(--inset) clamp(40px,5vw,72px);display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:12px}
 .central-content{padding:clamp(24px,3vw,40px)}
 .central-content h2{margin:8px 0 26px}
-.official-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.official-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
 .official-grid a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:96px;padding:14px 6px;text-align:center;border:1px solid transparent;border-radius:var(--radius);font-family:var(--display);font-weight:800;font-size:15px;line-height:1.05;letter-spacing:.03em;text-transform:uppercase;transition:border-color .2s,background-color .2s,color .2s}
 .official-grid .ic{font-size:30px;color:var(--gold-2);stroke-width:1.5}
 .official-grid a:hover{background:var(--surface-2);border-color:var(--line-strong);color:var(--gold-2)}
